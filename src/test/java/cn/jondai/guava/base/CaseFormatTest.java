@@ -5,19 +5,21 @@ import static org.hamcrest.Matchers.*;
 import com.google.common.base.CaseFormat;
 
 /**
- * CaseFormat features
+ * CaseFormat用来转换各种不同的编程语言间的变量名命名格式, 主要用到的方法只有一个 CaseFormat.to(CaseFormat from, String s)
+ * 
+ * LOWER_CAMEL:Java变量的命名规则，如“lowerCamel”
+ * LOWER_HYPHEN:连字符连接变量的命名规则，如“lower-hyphen”。
+ * LOWER_UNDERSCORE:C ++变量命名规则，如“lower_undersc
+ * UPPER_CAMEL:Java和C++类的命名规则，如“UpperCamel”。
+ * UPPER_UNDERSCORE:Java和C++常量的命名规则，如“UPPER_UNDERSCORE”。
  */
 public class CaseFormatTest {
 
     @Test
-    /**
-     * UPPER_CAMEL:驼峰规范，首字母大写
-     * UPPER_UNDERSCORE:匹配大写字母，前置增加'_'
-     */
+ 
     public void shouldConvertToUpperUnderscore() throws Exception {
         assertThat("HELLO_WORLD_A",equalTo(CaseFormat.UPPER_CAMEL.to(CaseFormat.UPPER_UNDERSCORE,"HelloWorldA")));
     }
-
 
     @Test
     public void shouldConvertToLowerCamel() throws Exception {
