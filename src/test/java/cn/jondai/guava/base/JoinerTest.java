@@ -40,7 +40,7 @@ public class JoinerTest {
 
     @Test
     public void shouldJoinWithCommasAndReplaceNullsWithWordNothing() throws Exception {
-    	//当遇遇到null是，useForNullti代替
+    	//当遇遇到null是，useForNull代替
     	assertThat("Poland,Brasil,Ukraine,NONE,England,Croatia", equalTo(Joiner.on(",").useForNull("NONE").join(countriesWithNullValue)));
     }
 

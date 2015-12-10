@@ -69,7 +69,7 @@ public class SplitterTest {
 
     @Test
     public void shouldSplitAndOmitEmptyElementsAndWhitespaces() throws Exception {
-        // when 掉出两端的空格，并忽略空字符串
+        // when 去掉两端的空格，并忽略空字符串
         Iterable<String> iterable = Splitter.on(";").omitEmptyStrings()
                 .trimResults().split("Java;;  ;Scala;;;Haskell;Brainfuck;Kotlin");
         List<String> splittedList = convertToList(iterable.iterator());
