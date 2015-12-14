@@ -33,13 +33,15 @@ public class UserProfile {
         return Objects.hashCode(name, age, nickname);
     }
 
-    public String toString() {
+    @SuppressWarnings("deprecation")
+	public String toString() {
         return Objects.toStringHelper(this).add("name", name)
                 .add("nickname", nickname)
                 .addValue(age).toString();
     }
 
-    public String getDisplayName() {
+    @SuppressWarnings("deprecation")
+	public String getDisplayName() {
         return Objects.firstNonNull(nickname, name);
     }
 }

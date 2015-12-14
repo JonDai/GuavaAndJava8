@@ -101,7 +101,8 @@ public class Country {
         this.area = area;
     }
 
-    @Override
+    @SuppressWarnings("deprecation")
+	@Override
     public String toString() {
         return Objects.toStringHelper(this)
                 .add("name", name)
